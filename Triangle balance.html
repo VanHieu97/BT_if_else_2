@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="A"> Cạnh A!
+<br>
+<input type="text" id="B"> Cạnh B!
+<br>
+<input type="text" id="C"> Cạnh C!
+<br>
+<input type="text" id="D" style="width: 30%"> Cạnh của tam giác!
+<br>
+<button onclick="Triangle()"> Kết Quả</button>
+<script>
+    function Triangle() {
+        let a = +document.getElementById('A').value
+        let b = +document.getElementById('B').value
+        let c = +document.getElementById('C').value
+        if (a,b,c > 0 && a + b >c && b + c > a && a + c > b ){
+            document.getElementById('D').value = a + " " + b + " " + c + "Là cạnh của một tam giác!";
+        }else {
+            document.getElementById('D').value = a + " " + b + " " + c + "Không phải là cạnh của một tam giác!";
+        }
+    }
+</script>
+</body>
+</html>

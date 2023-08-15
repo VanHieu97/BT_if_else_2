@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="a"> Nhập vào số A!
+<br>
+<input type="text" id="b"> Nhập vào số B!
+<br>
+<p id="giaTri"></p>
+<button onclick="kTra()" > Kiểm tra</button>
+<script>
+    function kTra() {
+        let a = document.getElementById('a').value;
+        let b = document.getElementById('b').value;
+        if(a % b === 0 ){
+            document.getElementById('giaTri').innerHTML = "A chia hết cho B";
+        }else {
+            document.getElementById('giaTri').innerHTML = " A không chia hết cho B";
+        }
+    }
+</script>
+</body>
+</html>

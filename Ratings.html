@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="diemThi"> Nhập Điểm Thi!
+<br>
+<input type="text" id="diemKTG"> Nhập Điểm Thi!
+<br>
+<input type="text" id="diemKTC"> Nhập Điểm Thi!
+<h1 id="GiaTri"></h1>
+<br>
+<button onclick="Ratings()"> Kiểm Tra!</button>
+<button onclick="del()"> Xóa!</button>
+<script>
+    function Ratings() {
+        let a = document.getElementById('diemThi').value;
+        let b = document.getElementById('diemKTG').value;
+        let c = document.getElementById('diemKTC').value;
+        if(a >=9  && b >=9 && c >=9 ){
+            document.getElementById('GiaTri').innerHTML = "Bạn là học sinh giỏi!";
+        }else if (a >=7 && b >=7 && c>=7){
+            document.getElementById('GiaTri').innerHTML = "Bạn là học sinh Khá!";
+        }else if (a>=5 && b >=5 && c >=5){
+            document.getElementById('GiaTri').innerHTML = "Bạn là học sinh Trung Bình!";
+        }else {
+            document.getElementById('GiaTri').innerHTML = "Bạn là học sinh NGU!";
+        }
+    }
+    function del() {
+        document.getElementById('diemThi').value = "";
+        document.getElementById('diemKTG').value = "";
+        document.getElementById('diemKTC').value = "";
+    }
+</script>
+</body>
+</html>

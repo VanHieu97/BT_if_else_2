@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="sale"> Nhập doanh số!
+<br>
+<input type="text" id="pTram" readonly> Phần Trăm Hoa Hồng!
+<button onclick="sales()">Xem</button>
+<script>
+    function sales() {
+        let quantity = +document.getElementById('sale').value;
+        console.log(quantity);
+        let a = quantity*0.3;
+        let b = quantity*0.5;
+        if( quantity <=1000){
+            document.getElementById('pTram').value = a;
+        }else if( quantity <=2000){
+        document.getElementById('pTram').value = b;
+        }
+    }
+</script>
+</body>
+</html>

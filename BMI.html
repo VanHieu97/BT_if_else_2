@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="canNang" > Nhập số cân nặng!
+<br>
+<input type="text" id="chieuCao"> Nhập số chiều cao!
+<br>
+<input type="text" readonly id="giaTri"> Kết Quả chỉ số!
+<br>21`
+<button onclick="BMI()">Kiểm Tra!</button>
+<script>
+    function BMI() {
+        let canNang = document.getElementById('canNang').value;
+        let chieuCao = document.getElementById('chieuCao').value;
+        let chiSo = (canNang/chieuCao*2)
+        if (chiSo < 18.5){
+            document.getElementById('giaTri').value = chiSo + ' UnderWeight';
+        }else if (18.5 <= chiSo <25.0){
+            document.getElementById('giaTri').value = chiSo +  ' Normal';
+        }else if (25<= chiSo <30){
+            document.getElementById('giaTri').value = chiSo + ' OverWeight'
+        }else{
+            document.getElementById('giaTri').value = chiSo + ' Obese';
+        }
+    }
+</script>
+
+</body>
+</html>

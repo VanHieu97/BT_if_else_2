@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="a"> Ax2!
+<br>
+<input type="text" id="b"> Bx!
+<br>
+<input type="text" id="c"> C!
+<br>
+<h2 id="S"></h2>
+<button onclick="timS()"> Tìm Nghiệm!</button>
+<script>
+    function timS() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = +document.getElementById('c').value;
+        let dental = (b*b)-(4*a*c);
+        let dental0 = -b/2*a;
+        let x1 = (-b + Math.sqrt(dental))/(2*a);
+        let x2 = (-b - Math.sqrt(dental))/(2*a);
+        if(dental > 0){
+            document.getElementById('S').innerHTML = " Phương trình có 2 nghiệm phân biệt x1 = " + x1 +"....x2 =" + x2;
+        }else if(dental === 0){
+            document.getElementById('S').innerHTML = "Phương trình có nghiệm kép x1 = x2 = " + dental0;
+        }else{
+            document.getElementById('S').innerHTML = " Phương trình vô nghiệm!";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="thangLe">
+<button onclick="Test()"> Tính số ngày!</button>
+<br>
+<p id="kq"></p>
+<script>
+    function Test() {
+        let number1 = +document.getElementById('thangLe').value;
+        switch (number1){
+            case 2:
+                document.getElementById('kq').innerHTML = number1 + " Tháng có 28 hoặc 29 ngày!";
+                break;
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('kq').innerHTML = "Tháng.." + number1 + "Là tháng này có 31 ngày!";
+                break;
+            default:
+                document.getElementById('kq').innerHTML = "Tháng.." + number1 + " Là tháng này có 30 ngày! "
+
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="position: absolute; left: 220px;top: 175px;">Do you love Me?</h1>
+<input type="button" id="YES" value="Yes" onclick="dongY()" style="position: absolute; left: 285px;top: 235px">
+<input type="button" id="NO" value="No" onmouseover="deoNhe()" style="position: absolute; left: 1400px;top: 672px">
+<p id="ok" style="color: red"></p>
+<script>
+    function dongY() {
+        document.getElementById('ok').innerHTML = "I love U <3!"
+    }
+    function deoNhe() {
+        let x = Math.round(Math.random() * window.innerWidth);
+        let y = Math.round(Math.random() * window.innerHeight);
+        document.getElementById('NO').style.left = x +'px';
+        document.getElementById('NO').style.top = y +'px';
+    }
+</script>
+
+</body>
+</html>

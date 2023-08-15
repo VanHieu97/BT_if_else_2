@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="myImg" src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Football_%28soccer_ball%29.svg" style = "width: 30%"/>
+<p> Click button below to move the image to right</p>
+<button onclick="moveRight()" value="Click Me">Click Me </button>
+<script>
+    function Image() {
+        imgObj = document.getElementById('myImg');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '50px';
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) +'5px';
+    }
+    window.onload = Image;
+</script>
+</body>
+
+</html>

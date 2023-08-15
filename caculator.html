@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    button {
+        width: 100%;
+    }
+    </style>
+
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th colspan="4"><input type="text" id="kq"></th>
+    </tr>
+    <tr>
+        <td><button onclick="layData(event)" value="1">1</button></td>
+        <td><button onclick="layData(event)" value="2">2</button></td>
+        <td><button onclick="layData(event)" value="3">3</button></td>
+        <td><button onclick="layData(event)" value="+">+</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="layData(event)" value="4">4</button></td>
+        <td><button onclick="layData(event)" value="5">5</button></td>
+        <td><button onclick="layData(event)" value="6">6</button></td>
+        <td><button onclick="layData(event)" value="-">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="layData(event)" value="7">7</button></td>
+        <td><button onclick="layData(event)" value="8">8</button></td>
+        <td><button onclick="layData(event)" value="9">9</button></td>
+        <td><button onclick="layData(event)" value="*">*</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="del()" value="C">C</button></td>
+        <td><button onclick="layData(event)" value="0">0</button></td>
+        <td><button onclick="tinh()" value="=">=</button></td>
+        <td><button onclick="layData(event)" value="/">/</button></td>
+    </tr>
+    <script>
+        let sum = "";
+        function layData(a) {
+            let Sum = a.target.value;
+            sum +=Sum;
+            document.getElementById('kq').value = sum;
+        }
+        function tinh() {
+            sum = eval(sum);
+            document.getElementById('kq').value = sum;
+        }
+        function del() {
+            sum = "";
+            document.getElementById('kq').value = sum;
+        }
+    </script>
+</table>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="a"> Số A!
+<br>
+<input type="text" id="b"> Số B!
+<br>
+<input type="text" id="kq" style="width: 30%"> Kết Quả!
+<br>
+<button onclick="timX()" >PT1</button>
+<script>
+    function timX() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let c = -b/a;
+        if(a === 0 && b === 0){
+            document.getElementById('kq').value = " Phương trình vô số nghiệm!";
+        }else if( a === 0 && b !== 0){
+            document.getElementById('kq').value = " Phương trình vô nghiệm!";
+        }else {
+            document.getElementById('kq').value = " Phương trình có một nghiệm duy nhất  S = "  + c;
+        }
+    }
+</script>
+
+</body>
+</html>

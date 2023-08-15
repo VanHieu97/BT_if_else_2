@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="age"> Nhập vào tuổi!
+<br>
+<p id="ktr" ></p>
+<button onclick="checkAge()" > Xem</button>
+<script>
+    function checkAge() {
+        let age = document.getElementById('age').value;
+        if (age >= 15){
+            document.getElementById('ktr').innerHTML = "Đủ tuổi vào lớp 10";
+        }else {
+            document.getElementById('ktr').innerHTML = "Chưa đủ tuổi vào  lớp 10";
+        }
+    }
+</script>
+</body>
+</html>
